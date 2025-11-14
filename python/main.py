@@ -22,7 +22,7 @@ def brute_force(target_hash, max_len=6):
             
             if attempt % 10000 == 0:
                 percent = (attempt / total) * 100
-                print(f"    [{attempt:,}] {percent:.1f}% ▓▓▓▓▓", end='\r')
+                print(f"    [{attempt:,}] {percent:.1f}%", end='\r')
             
             for algo_name, algo_func in algorithms.items():
                 hsh = algo_func(pwd.encode()).hexdigest()
